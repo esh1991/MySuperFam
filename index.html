@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StoryWeave Books - Your Family's Magical Storybook</title>
+    <title>MySuperFam - Turn Your Loved Ones into Legends</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -17,52 +17,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- ======== HERO SECTION ======== -->
     <header class="hero-section">
         <div class="container">
-            <!-- === Main Book Mockup Image === -->
-            <!-- IMPORTANT: Replace this placeholder with a stunning mockup of your book -->
-            <img src="https://placehold.co/800x500/6A4C93/FFFFFF?text=Your+Beautiful\nBook+Mockup" alt="Customized family storybook mockup" class="hero-image">
+            <h2 class="logo">MySuperFam</h2>
+            <h1 class="main-headline">Turn Your Loved Ones into Legends.</h1>
+            <p class="subhead">Every family has an origin story. Let’s tell yours.<br>We turn your memories into a comic-style adventure book starring your family.</p>
             
-            <h1>Turn Your Family's Story into a Magical Bedtime Book.</h1>
-            <p class="subtitle">Starring Your Family, Written by Magic.</p>
-            
-            <form id="waitlist-form-hero" action="https://api.web3forms.com/submit" method="POST">
+            <form id="waitlist-form-hero" class="waitlist-form" action="https://api.web3forms.com/submit" method="POST">
                 <!-- IMPORTANT: Replace with your actual Web3Forms Access Key -->
                 <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="New Waitlist Signup from StoryWeave!">
-
+                <input type="hidden" name="subject" value="New MySuperFam Waitlist Signup!">
+                <p class="form-label">Get 25% off when we launch!</p>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Get Early Access</button>
                 </div>
-                <p class="microcopy">Join the waitlist for 25% off at launch!</p>
             </form>
             <div id="form-message-hero" class="form-message"></div>
         </div>
+        <!-- IMPORTANT: Replace this placeholder with your full-width comic book cover mockup -->
+        <img src="https://placehold.co/1920x800/E63946/FFFFFF?text=EPIC+COMIC+BOOK+COVER+MOCKUP" alt="Mockup of a MySuperFam comic book cover" class="hero-visual">
     </header>
 
     <main>
+        <!-- ======== WHY MYSUPERFAM SECTION ======== -->
+        <section id="why-mysuperfam">
+            <div class="container">
+                <h2>Starring the Real Superheroes — You.</h2>
+                <p>At MySuperFam, we believe every family has an origin story worth telling — and it’s way more epic than you think. Whether you're a Supermom, a Dad with X-ray Snack Vision, or a Grandparent who bends time to spoil the grandkids, you're the star of this comic.</p>
+                <p class="bold-tagline">It’s bold. It’s hilarious. It’s unforgettable.</p>
+            </div>
+        </section>
+
         <!-- ======== HOW IT WORKS SECTION ======== -->
         <section id="how-it-works">
             <div class="container">
-                <h2>Creating Your Magic Book is as Easy as 1-2-3</h2>
-                <div class="steps-grid">
-                    <div class="step">
-                        <i class="fas fa-pencil-alt"></i>
-                        <h3>1. Tell Us Your Story</h3>
-                        <p>Answer a few simple prompts about your family's heroes, their special talents, and fun memories.</p>
+                <div class="comic-panels-grid">
+                    <div class="comic-panel">
+                        <div class="panel-header">PANEL 1</div>
+                        <h3>✍️ Tell Us Your Story</h3>
+                        <p>Answer a few fun questions about your family’s quirks, memories, and secret powers.</p>
                     </div>
-                    <div class="step">
-                        <i class="fas fa-magic"></i>
-                        <h3>2. AI-Powered Magic</h3>
-                        <p>Our creative AI weaves your details into a unique adventure and transforms your photos into charming illustrations.</p>
+                    <div class="comic-panel">
+                        <div class="panel-header">PANEL 2</div>
+                        <h3>🎨 AI-Powered Artists Create the Magic</h3>
+                        <p>Our smart engine + comic artists turn your answers into a full-color comic adventure.</p>
                     </div>
-                    <div class="step">
-                        <i class="fas fa-gift"></i>
-                        <h3>3. Receive Your Treasure</h3>
-                        <p>Get a beautiful, professionally printed storybook delivered right to your door, ready for countless adventures.</p>
+                    <div class="comic-panel">
+                        <div class="panel-header">PANEL 3</div>
+                        <h3>📦 Your Book Arrives at Your Door</h3>
+                        <p>A beautifully printed, comic-style keepsake delivered for bedtime, birthdays, or bragging rights.</p>
                     </div>
                 </div>
             </div>
@@ -71,49 +76,57 @@
         <!-- ======== VISUAL PROOF SECTION ======== -->
         <section id="visual-proof">
             <div class="container">
-                <h2>From Family Photo to Storybook Hero</h2>
+                <h2>From Family Photo to Superhero!</h2>
                 <div class="comparison-container">
                     <div class="comparison-item">
-                        <p class="image-label">Your Photo</p>
                         <!-- IMPORTANT: Replace with a real photo -->
-                        <img src="https://placehold.co/400x500/cccccc/333333?text=Real+Family\nPhoto+Here" alt="A real family photograph">
+                        <img src="https://placehold.co/400x500/cccccc/333333?text=BEFORE" alt="A real family photograph">
                     </div>
+                    <div class="arrow">💥</div>
                     <div class="comparison-item">
-                        <p class="image-label">Your Illustrated Story</p>
-                        <!-- IMPORTANT: Replace with the generated cartoon illustration -->
-                        <img src="https://placehold.co/400x500/A0C4FF/333333?text=Cartoon\nIllustration\nHere" alt="A cartoon illustration derived from the photo">
+                        <!-- IMPORTANT: Replace with the generated comic illustration -->
+                        <img src="https://placehold.co/400x500/007BFF/FFFFFF?text=AFTER" alt="A comic illustration of the family">
                     </div>
                 </div>
-                <p class="description">
-                    Our unique AI captures the essence of your loved ones—their smiles, their spirit—and reimagines them as charming, hand-illustrated characters.
-                </p>
+                <p class="tagline">“The cape fits better than you think.”</p>
             </div>
         </section>
 
-        <!-- ======== BENEFITS SECTION ======== -->
-        <section id="benefits">
+        <!-- ======== PERFECT GIFT SECTION ======== -->
+        <section id="perfect-gift">
             <div class="container">
-                <h2>More Than a Book, It's a Lifelong Memory</h2>
-                <div class="benefits-grid">
-                    <div class="benefit">
-                        <i class="fas fa-heart"></i>
-                        <h3>Strengthens Family Bonds</h3>
-                        <p>See your child's eyes light up as they read about their real-life heroes: you, their grandparents, their siblings.</p>
+                <h2>Not Just a Book. The Most Legendary Gift They’ll Ever Get.</h2>
+                <div class="gift-grid">
+                    <div class="gift-item"><i class="fas fa-gift"></i> Perfect Gift for Any Occasion</div>
+                    <div class="gift-item"><i class="fas fa-palette"></i> Personalized names, powers, and illustrations</div>
+                    <div class="gift-item"><i class="fas fa-keyboard"></i> No design skills needed — just answer fun questions</div>
+                    <div class="gift-item"><i class="fas fa-moon"></i> A bedtime story they’ll never forget</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== OTHER WORLDS TEASER SECTION ======== -->
+        <section id="other-worlds">
+            <div class="container">
+                <h2>Explore Other Legendary Story Worlds</h2>
+                <div class="story-worlds-carousel">
+                    <div class="story-world-card">
+                        <!-- IMPORTANT: Replace with a mockup for the medieval theme -->
+                        <img src="https://placehold.co/400x500/8B4513/FFFFFF?text=House+of+Heroes" alt="House of Heroes theme mockup">
+                        <h3>House of Heroes</h3>
+                        <p>Born from heroes. Destined for greatness.</p>
                     </div>
-                    <div class="benefit">
-                        <i class="fas fa-star"></i>
-                        <h3>Boosts Child's Confidence</h3>
-                        <p>Our stories focus on positive qualities and achievements, inspiring your little one to be brave, kind, and resilient.</p>
+                    <div class="story-world-card">
+                        <!-- IMPORTANT: Replace with a mockup for the fantasy theme -->
+                        <img src="https://placehold.co/400x500/4B0082/FFFFFF?text=The+Hidden+Heir" alt="The Hidden Heir theme mockup">
+                        <h3>The Hidden Heir</h3>
+                        <p>You were always meant for something magical.</p>
                     </div>
-                    <div class="benefit">
-                        <i class="fas fa-book-open-reader"></i>
-                        <h3>Creates a Timeless Keepsake</h3>
-                        <p>This isn't just a toy. It's a personalized family heirloom that will be treasured for years to come.</p>
-                    </div>
-                    <div class="benefit">
-                        <i class="fas fa-gifts"></i>
-                        <h3>The Perfect, Unforgettable Gift</h3>
-                        <p>Give a truly meaningful gift for birthdays or holidays that tells their own special story.</p>
+                    <div class="story-world-card coming-soon">
+                        <div class="coming-soon-content">
+                            <h3>More Worlds Coming Soon!</h3>
+                            <p>Sci-Fi? Mystery? The Multiverse is expanding...</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,30 +135,35 @@
         <!-- ======== FINAL CTA SECTION ======== -->
         <section id="final-cta">
             <div class="container">
-                <h2>Be the First to Create Your Storybook</h2>
-                <p class="subtitle">Sign up now to lock in your <strong>25% early bird discount</strong>. We'll notify you the moment we launch!</p>
-                <form id="waitlist-form-footer" action="https://api.web3forms.com/submit" method="POST">
+                <h2>Every Family Has a Superhero. Let’s Tell Their Story.</h2>
+                <form id="waitlist-form-footer" class="waitlist-form" action="https://api.web3forms.com/submit" method="POST">
                     <!-- IMPORTANT: Replace with your actual Web3Forms Access Key -->
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    <input type="hidden" name="subject" value="New Waitlist Signup from StoryWeave (Footer)!">
-                    
+                    <input type="hidden" name="subject" value="New MySuperFam Waitlist Signup! (Footer)">
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Enter your email address" required>
-                        <button type="submit">I Want My Discount!</button>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">Get Early Access</button>
                     </div>
                 </form>
                 <div id="form-message-footer" class="form-message"></div>
             </div>
         </section>
     </main>
-    
+
     <footer>
         <div class="container">
-            <p>© 2024 StoryWeave Books (Your Name Here). All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#waitlist-form-hero">Join the Waitlist</a>
+            </div>
+            <div class="socials">
+                Follow us: 
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="made-with">Made with 💥 by people who believe in bedtime magic.</p>
         </div>
     </footer>
-
-    <!-- Your Custom JS -->
+    
     <script src="app.js"></script>
 </body>
 </html>
