@@ -43,7 +43,7 @@ section { padding: 80px 0; }
 }
 .hero-section .logo { font-size: 2.5rem; color: var(--text-color); margin-bottom: 2rem; }
 .hero-section .main-headline { margin-bottom: 1rem; }
-.hero-section .subhead { font-size: 1.2rem; max-width: 600px; margin: 0 auto 2.5rem auto; }
+.hero-section .subhead { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem auto; }
 .hero-visual { width: 100%; margin-top: 3rem; }
 
 /* Waitlist Form */
@@ -83,7 +83,7 @@ section { padding: 80px 0; }
 
 /* Why MySuperFam Section */
 #why-mysuperfam { text-align: center; }
-#why-mysuperfam p { max-width: 700px; margin-left: auto; margin-right: auto; font-size: 1.1rem; }
+#why-mysuperfam .section-subhead { max-width: 700px; margin: 0 auto; font-size: 1.2rem; }
 .bold-tagline { font-weight: 700; font-size: 1.3rem !important; margin-top: 2rem; }
 
 /* How It Works Section - Comic Panels */
