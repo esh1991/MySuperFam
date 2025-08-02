@@ -1,8 +1,8 @@
-// This script handles the form submission using JavaScript to prevent page reload
-// and provides feedback to the user.
-
 document.addEventListener("DOMContentLoaded", function() {
     
+    // IMPORTANT: Paste your N8N Production Webhook URL here
+    const N8N_WEBHOOK_URL = "YOUR_N8N_WEBHOOK_URL_HERE";
+
     // Function to handle form submission
     const handleFormSubmit = (formId, messageId) => {
         const form = document.getElementById(formId);
@@ -13,41 +13,47 @@ document.addEventListener("DOMContentLoaded", function() {
         form.addEventListener("submit", async function (e) {
             e.preventDefault();
             
+            // Get form data
             const formData = new FormData(form);
-            const object = {};
-            formData.forEach((value, key) => {
-                object[key] = value;
-            });
-            const json = JSON.stringify(object);
+            const email = formData.get('email');
+            
+            // Prepare data for N8N
+            const data = {
+                email: email,
+                source: formId // e.g., 'waitlist-form-hero' or 'waitlist-form-footer'
+            };
 
+            // Display "Sending..." message to the user
             messageDiv.innerHTML = "Sending...";
             messageDiv.style.color = "#555";
             messageDiv.classList.remove('success', 'error');
 
             try {
-                const response = await fetch("https://api.web3forms.com/submit", {
+                // Send the data to your N8N webhook
+                const response = await fetch(N8N_WEBHOOK_URL, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        Accept: "application/json",
                     },
-                    body: json,
+                    body: JSON.stringify(data),
                 });
                 
-                const result = await response.json();
-
-                if (result.success) {
-                    messageDiv.innerHTML = "Success! You're on the list. We'll be in touch!";
+                // Check if the request was successful (HTTP status 200-299)
+                if (response.ok) {
+                    messageDiv.innerHTML = "Success! You're on the list. Welcome, hero!";
                     messageDiv.classList.add('success');
                     form.reset();
                 } else {
-                    console.error("Submission error:", result);
-                    messageDiv.innerHTML = result.message || "Oops! Something went wrong.";
+                    // Handle server-side errors
+                    const errorResult = await response.json();
+                    console.error("Submission error:", errorResult);
+                    messageDiv.innerHTML = "Oops! Something went wrong on our end.";
                     messageDiv.classList.add('error');
                 }
             } catch (error) {
+                // Handle network errors (e.g., no internet connection)
                 console.error("Fetch error:", error);
-                messageDiv.innerHTML = "Oops! An error occurred. Please try again.";
+                messageDiv.innerHTML = "Oops! A network error occurred. Please try again.";
                 messageDiv.classList.add('error');
             }
         });
