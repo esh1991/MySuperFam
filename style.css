@@ -230,7 +230,7 @@ section { padding: 80px 0; }
     display: flex;
     flex-direction: column;
 }
-.story-world-card:hover { transform: translateY(-50%) scale(1.05); }
+.story-world-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 .story-world-card img { width: 100%; height: 320px; object-fit: cover; }
 .story-world-card .card-content {
     padding: 1rem 15px 15px 15px;
