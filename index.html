@@ -17,23 +17,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ======== HERO SECTION ======== -->
+    <!-- ======== HERO SECTION (UPDATED) ======== -->
     <header class="hero-section">
-        <div class="container">
-            <h2 class="logo">MySuperFam</h2>
-            <h1 class="main-headline">Starring the Real Superheroes — You.</h1>
-            <p class="subhead">At MySuperFam, we believe every family has an origin story worth telling — and it’s way more epic than you think. Whether you're a Supermom, a Dad with X-ray Snack Vision, or a Grandparent who bends time to spoil the grandkids, you're the star of this comic.</p>
-            
-            <form id="waitlist-form-hero" class="waitlist-form">
-                <p class="form-label">Get 25% off when we launch!</p>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit">Get Early Access</button>
-                </div>
-            </form>
-            <div id="form-message-hero" class="form-message"></div>
+        <div class="container hero-layout">
+            <div class="hero-content">
+                <h2 class="logo">MySuperFam</h2>
+                <h1 class="main-headline">Starring the Real Superheroes — You.</h1>
+                <p class="subhead">At MySuperFam, we believe every family has an origin story worth telling — and it’s way more epic than you think. Whether you're a Supermom, a Dad with X-ray Snack Vision, or a Grandparent who bends time to spoil the grandkids, you're the star of this comic.</p>
+                
+                <form id="waitlist-form-hero" class="waitlist-form">
+                    <p class="form-label">Get 25% off when we launch!</p>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">Get Early Access</button>
+                    </div>
+                </form>
+                <div id="form-message-hero" class="form-message"></div>
+            </div>
+            <div class="hero-placeholder">
+                <!-- Your book mockup or other hero image will go here -->
+            </div>
         </div>
-        <img src="https://placehold.co/1920x800/E63946/FFFFFF?text=EPIC+COMIC+BOOK+COVER+MOCKUP" alt="Mockup of a MySuperFam comic book cover" class="hero-visual">
     </header>
 
     <main>
@@ -50,21 +54,18 @@
             <div class="container">
                 <h2>How It Works</h2>
                 <div class="comic-panels-grid">
-                    <!-- Step 1 -->
                     <div class="comic-panel">
                         <div class="panel-content">
                             <h3>Tell Us Your Story</h3>
                             <p>Answer a few fun questions about your family’s quirks, memories, and secret powers.</p>
                         </div>
                     </div>
-                    <!-- Step 2 -->
                     <div class="comic-panel">
                         <div class="panel-content">
                             <h3>AI-Powered Artists Create Magic</h3>
                             <p>Our smart engine + comic artists turn your answers into a full-color comic adventure.</p>
                         </div>
                     </div>
-                    <!-- Step 3 -->
                     <div class="comic-panel">
                         <div class="panel-content">
                             <h3>Your Book Arrives</h3>
@@ -92,20 +93,44 @@
             </div>
         </section>
 
-        <!-- ======== PERFECT GIFT SECTION ======== -->
+        <!-- ======== PERFECT GIFT SECTION (UPDATED) ======== -->
         <section id="perfect-gift">
             <div class="container">
                 <h2>Not Just a Book. The Most Legendary Gift They’ll Ever Get.</h2>
                 <div class="gift-grid">
-                    <div class="gift-item"><i class="fas fa-gift"></i> Perfect Gift for Any Occasion</div>
-                    <div class="gift-item"><i class="fas fa-palette"></i> Personalized names, powers, and illustrations</div>
-                    <div class="gift-item"><i class="fas fa-keyboard"></i> No design skills needed — just answer fun questions</div>
-                    <div class="gift-item"><i class="fas fa-moon"></i> A bedtime story they’ll never forget</div>
+                    <div class="gift-item">
+                        <img src="one.png" alt="Comic style number one">
+                        <div class="gift-text">
+                            <h3>Perfect Gift for Any Occasion</h3>
+                            <p class="gift-description">The ultimate "wow" gift for birthdays, holidays, or just because.</p>
+                        </div>
+                    </div>
+                    <div class="gift-item">
+                        <img src="two.png" alt="Comic style number two">
+                        <div class="gift-text">
+                            <h3>Personalized Everything</h3>
+                            <p class="gift-description">Your family, your story. No two books are ever the same.</p>
+                        </div>
+                    </div>
+                    <div class="gift-item">
+                        <img src="three.png" alt="Comic style number three">
+                        <div class="gift-text">
+                            <h3>No Skills Needed</h3>
+                            <p class="gift-description">If you can answer "What's for dinner?", you can make a comic.</p>
+                        </div>
+                    </div>
+                    <div class="gift-item">
+                        <img src="four.png" alt="Comic style number four">
+                        <div class="gift-text">
+                            <h3>The Unforgettable Bedtime Story</h3>
+                            <p class="gift-description">Get ready for nightly requests of "Read it again!"</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ======== OTHER WORLDS TEASER SECTION ======== -->
+        <!-- ======== OTHER WORLDS TEASER SECTION (UPDATED) ======== -->
         <section id="other-worlds">
             <div class="container">
                 <h2>Explore Other Legendary Story Worlds</h2>
@@ -133,10 +158,7 @@
                             <p>Cozy, real-world stories for younger kids.</p>
                         </div>
                         <div class="story-world-card coming-soon">
-                            <div class="coming-soon-content">
-                                <h3>More Worlds Coming Soon!</h3>
-                                <p>Sci-Fi? Mystery? The Multiverse is expanding...</p>
-                            </div>
+                            <img src="coming_soon.png" alt="More story worlds coming soon">
                         </div>
                     </div>
                     <button id="next-btn" class="carousel-btn" aria-label="Next Story World"><i class="fas fa-chevron-right"></i></button>
