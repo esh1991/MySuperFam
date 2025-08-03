@@ -76,7 +76,7 @@ section { padding: 80px 0; }
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 .hero-placeholder {
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -310,3 +310,4 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
     #prev-btn { left: 5px; }
     #next-btn { right: 5px; }
 }
+
