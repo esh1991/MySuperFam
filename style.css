@@ -48,8 +48,8 @@ section { padding: 80px 0; }
 }
 .hero-layout {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 10px;
     align-items: stretch; 
     width: 100%;
 }
@@ -315,3 +315,4 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
     #prev-btn { left: 5px; }
     #next-btn { right: 5px; }
 }
+
