@@ -11,6 +11,7 @@
     --font-headline: 'Bangers', cursive;
     --font-body: 'Inter', sans-serif;
 }
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -76,18 +77,17 @@ section { padding: 80px 0; }
 }
 .hero-placeholder {
     width: 100%;
-    display: flex; /* Helps center the image if it's smaller */
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .hero-placeholder img {
     width: 100%;
-    max-width: 450px; /* Controls the max size of the image */
+    max-width: 450px;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transform: rotate(3deg); /* Adds a slight fun tilt */
+    transform: rotate(3deg);
 }
 
 /* Waitlist Form */
@@ -303,5 +303,3 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
     #prev-btn { left: 5px; }
     #next-btn { right: 5px; }
 }
-
-
