@@ -300,7 +300,7 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
     }
     .hero-placeholder img {
         height: auto;
-        width: 60%;
+        width: 100%;
         max-height: none;
     }
 
@@ -317,3 +317,4 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
     #prev-btn { left: 5px; }
     #next-btn { right: 5px; }
 }
+
