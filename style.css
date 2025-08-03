@@ -42,73 +42,90 @@ section { padding: 80px 0; }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 90vh;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    align-items: stretch; /* IMPORTANT: Makes columns equal height */
+    width: 100%;
+}
+.hero-content {
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: center; /* Vertically centers text content */
 }
-.hero-section .logo {
-    color: var(--text-color);
+.hero-content .logo {
+    text-align: left;
     margin-bottom: 1rem;
-    font-size: 2.5rem;
 }
-.hero-section .main-headline {
-    color: var(--white-color);
-    text-shadow: 4px 4px 0px var(--text-color);
-    transform: skewX(-8deg);
+.hero-content .main-headline {
+    text-align: left;
     margin-bottom: 1rem;
-    font-size: 5.5rem;
-}
-.hero-section .subhead {
     color: var(--white-color);
+    text-shadow: 3px 3px 0px var(--text-color);
+}
+.hero-content .subhead {
+    text-align: left;
     font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
+    max-width: 100%;
+    margin: 0 0 2rem 0;
+    color: var(--white-color);
+    font-family: var(--font-body);
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 .hero-placeholder {
-    margin: 1.5rem 0;
+    width: 100%;
+    height: 100%; /* Makes the container fill the column height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .hero-placeholder img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
+    height: 90%; /* UPDATED: Image height is now a percentage of its container */
+    width: auto;  /* Width adjusts automatically to maintain aspect ratio */
+    max-height: 75vh; /* Safety net to prevent it getting too big on huge screens */
+    object-fit: contain; /* Ensures the whole image is visible without being squished */
     border-radius: var(--border-radius);
-    transform: rotate(5deg);
-    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.4));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: rotate(3deg);
 }
 
-/* Waitlist Form in Hero */
-.hero-section .waitlist-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-}
-.hero-section .form-label {
+/* Waitlist Form */
+.waitlist-form .form-label { font-weight: 600; margin-bottom: 0.5rem; text-align: left;}
+.hero-content .waitlist-form .form-label {
+    text-align: center;
     color: var(--white-color);
-    font-weight: 600;
+    font-family: var(--font-body);
+    font-size: 1rem;
 }
-.hero-section .form-group {
+.form-group {
     display: flex;
     gap: 10px;
-    width: 100%;
-    max-width: 450px;
+    max-width: 100%;
+    margin: 0;
 }
-.hero-section .form-group input[type="email"] {
+.hero-content .form-group {
+    justify-content: center;
+    max-width: 450px;
+    margin: 0 auto;
+}
+.form-group input[type="email"] {
     width: 100%;
     padding: 15px;
     border: 2px solid var(--text-color);
-    border-radius: 25px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
     font-family: var(--font-body);
 }
-.hero-section .form-group button {
+.form-group button {
     padding: 15px 30px;
     border: none;
-    border-radius: 25px;
+    border-radius: var(--border-radius);
     background-color: var(--pop-color);
     color: var(--white-color);
     font-size: 1rem;
@@ -119,10 +136,9 @@ section { padding: 80px 0; }
     white-space: nowrap;
 }
 .form-group button:hover { transform: scale(1.05); background-color: #7d3c98; }
-.hero-section .form-message {
-    margin-top: 0.5rem;
-    font-weight: 600;
-    height: 20px;
+.form-message { margin-top: 1rem; font-weight: 600; height: 20px;}
+.hero-content .form-message {
+    text-align: center;
 }
 .form-message.success { color: #b8ffc8; }
 .form-message.error { color: #ffb8b8; }
@@ -214,7 +230,7 @@ section { padding: 80px 0; }
     display: flex;
     flex-direction: column;
 }
-.story-world-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.story-world-card:hover { transform: translateY(-50%) scale(1.05); }
 .story-world-card img { width: 100%; height: 320px; object-fit: cover; }
 .story-world-card .card-content {
     padding: 1rem 15px 15px 15px;
@@ -253,9 +269,40 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     h2 { font-size: 2.2rem; }
-    
-    .hero-section .main-headline { font-size: 3.5rem; }
-    .hero-section .subhead { font-size: 1.1rem; }
+
+    .hero-section {
+        padding: 80px 0;
+        min-height: auto;
+    }
+    .hero-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-content,
+    .hero-content .logo,
+    .hero-content .main-headline,
+    .hero-content .subhead {
+        text-align: center;
+    }
+    .hero-content .waitlist-form .form-label {
+        text-align: center;
+    }
+    .hero-content .form-group {
+        justify-content: center;
+    }
+    .form-group input[type="email"] {
+        width: 100%;
+        max-width: 100%;
+    }
+    .hero-placeholder {
+        height: auto;
+        margin-top: 30px;
+    }
+    .hero-placeholder img {
+        height: auto;
+        width: 60%;
+        max-height: none;
+    }
 
     .comic-panels-grid { grid-template-columns: 1fr; gap: 30px; }
     .comic-panel h3 { font-size: 1.8rem; }
