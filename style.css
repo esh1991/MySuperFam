@@ -110,7 +110,7 @@ section { padding: 80px 0; }
 }
 .hero-content .form-group {
     justify-content: center;
-    max-width: 850px;
+    max-width: 1450px;
     margin: 0 auto;
 }
 .form-group input[type="email"] {
@@ -316,6 +316,7 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
     #prev-btn { left: 5px; }
     #next-btn { right: 5px; }
 }
+
 
 
 
