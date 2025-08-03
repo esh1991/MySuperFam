@@ -7,10 +7,10 @@
     --background-color: #FDFBFB;/* Soft Off-White */
     --text-color: #2C2C2C;      /* Charcoal Black */
     --white-color: #FFFFFF;
+    --hero-yellow: #fff204;
     --border-radius: 12px;
     --font-headline: 'Bangers', cursive;
     --font-body: 'Inter', sans-serif;
-    --font-handwritten: 'Gochi Hand', cursive;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,17 +64,17 @@ section { padding: 80px 0; }
 .hero-content .main-headline {
     text-align: left;
     margin-bottom: 1rem;
-    color: var(--pop-color);
-    text-shadow: 3px 3px 0px rgba(0,0,0,0.25);
+    color: var(--hero-yellow);
+    text-shadow: 3px 3px 0px var(--white-color);
 }
 .hero-content .subhead {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     max-width: 100%;
     margin: 0 0 2rem 0;
     color: var(--white-color);
-    font-family: var(--font-handwritten);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-family: var(--font-body);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 .hero-placeholder {
     width: 100%;
@@ -197,7 +197,7 @@ section { padding: 80px 0; }
 .gift-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 30px; max-width: 900px; margin: 0 auto; }
 .gift-item { display: flex; align-items: center; gap: 20px; text-align: left; }
 .gift-item img {
-    width: 80px;
+    width: 120px;
     height: auto;
     flex-shrink: 0;
 }
@@ -230,12 +230,7 @@ section { padding: 80px 0; }
     flex-direction: column;
 }
 .story-world-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-.story-world-card .image-container {
-    height: 320px;
-    width: 100%;
-    flex-shrink: 0;
-}
-.story-world-card img { width: 100%; height: 100%; object-fit: cover; }
+.story-world-card img { width: 100%; height: 320px; object-fit: cover; }
 .story-world-card .card-content {
     padding: 1rem 15px 15px 15px;
 }
@@ -246,11 +241,9 @@ section { padding: 80px 0; }
     border: none;
     padding: 0;
 }
-.story-world-card.coming-soon .image-container {
-    height: 100%;
-}
 .story-world-card.coming-soon img {
     object-fit: fill;
+    height: 100%;
 }
 .story-world-card.coming-soon .card-content {
     display: none;
