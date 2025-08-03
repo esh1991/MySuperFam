@@ -42,87 +42,73 @@ section { padding: 80px 0; }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.hero-layout {
-    display: grid;
-    /* UPDATED: Changed grid ratio to a more balanced value */
-    grid-template-columns: 1.3fr 1fr;
-    gap: 40px;
-    align-items: center;
-    width: 100%;
-}
-.hero-content {
-    text-align: left;
-}
-.hero-content .logo {
-    text-align: left;
+.hero-section .logo {
+    color: var(--text-color);
     margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
-.hero-content .main-headline {
-    text-align: left;
-    margin-bottom: 1rem;
+.hero-section .main-headline {
     color: var(--white-color);
-    text-shadow: 3px 3px 0px var(--text-color);
+    text-shadow: 4px 4px 0px var(--text-color);
+    transform: skewX(-8deg);
+    margin-bottom: 1rem;
+    font-size: 5.5rem;
 }
-.hero-content .subhead {
-    text-align: left;
+.hero-section .subhead {
+    color: var(--white-color);
     font-size: 1.2rem;
-    max-width: 100%;
-    margin: 0 0 2rem 0;
-    color: var(--white-color);
-    font-family: var(--font-body);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 .hero-placeholder {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 1.5rem 0;
 }
 .hero-placeholder img {
     width: 100%;
-    /* UPDATED: Increased max-width to a size that fits the new column */
-    max-width: 400px; 
+    max-width: 350px;
     height: auto;
     border-radius: var(--border-radius);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transform: rotate(3deg);
+    transform: rotate(5deg);
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.4));
 }
 
-/* Waitlist Form */
-.waitlist-form .form-label { font-weight: 600; margin-bottom: 0.5rem; text-align: left;}
-.hero-content .waitlist-form .form-label {
-    text-align: center;
-    color: var(--white-color);
-    font-family: var(--font-body);
-    font-size: 1rem;
+/* Waitlist Form in Hero */
+.hero-section .waitlist-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
 }
-.form-group {
+.hero-section .form-label {
+    color: var(--white-color);
+    font-weight: 600;
+}
+.hero-section .form-group {
     display: flex;
     gap: 10px;
-    max-width: 100%;
-    margin: 0;
-}
-.hero-content .form-group {
-    justify-content: center;
+    width: 100%;
     max-width: 450px;
-    margin: 0 auto;
 }
-.form-group input[type="email"] {
+.hero-section .form-group input[type="email"] {
     width: 100%;
     padding: 15px;
     border: 2px solid var(--text-color);
-    border-radius: var(--border-radius);
+    border-radius: 25px;
     font-size: 1rem;
     font-family: var(--font-body);
 }
-.form-group button {
+.hero-section .form-group button {
     padding: 15px 30px;
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 25px;
     background-color: var(--pop-color);
     color: var(--white-color);
     font-size: 1rem;
@@ -133,9 +119,10 @@ section { padding: 80px 0; }
     white-space: nowrap;
 }
 .form-group button:hover { transform: scale(1.05); background-color: #7d3c98; }
-.form-message { margin-top: 1rem; font-weight: 600; height: 20px;}
-.hero-content .form-message {
-    text-align: center;
+.hero-section .form-message {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    height: 20px;
 }
 .form-message.success { color: #b8ffc8; }
 .form-message.error { color: #ffb8b8; }
@@ -266,38 +253,9 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     h2 { font-size: 2.2rem; }
-
-    .hero-section {
-        padding: 80px 0;
-        min-height: auto;
-    }
-    .hero-layout {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .hero-content,
-    .hero-content .logo,
-    .hero-content .main-headline,
-    .hero-content .subhead {
-        text-align: center;
-    }
-    .hero-content .waitlist-form .form-label {
-        text-align: center;
-    }
-    .hero-content .form-group {
-        justify-content: center;
-    }
-    .form-group input[type="email"] {
-        width: 100%;
-        max-width: 100%;
-    }
-    .hero-placeholder {
-        height: auto; /* Allow image to define its own height */
-        margin-top: 30px;
-    }
-    .hero-placeholder img {
-        max-width: 250px; /* A good size for mobile view */
-    }
+    
+    .hero-section .main-headline { font-size: 3.5rem; }
+    .hero-section .subhead { font-size: 1.1rem; }
 
     .comic-panels-grid { grid-template-columns: 1fr; gap: 30px; }
     .comic-panel h3 { font-size: 1.8rem; }
@@ -306,7 +264,7 @@ footer { background-color: var(--text-color); color: var(--white-color); padding
     .comparison-container { flex-direction: column; }
     
     .gift-item img {
-        width: 120px; /* Reduce size back down on mobile */
+        width: 120px;
     }
 
     #prev-btn { left: 5px; }
